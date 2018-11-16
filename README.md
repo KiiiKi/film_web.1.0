@@ -1,5 +1,5 @@
 # film_web.1.0
-### 基于4.16.4的express版本
+### 基于4.16.4的express版本（没有放node-modules文件夹）
 #### 踩过的坑（好多忘记了 (´;︵;`) )
 #### 1. 搭express
 * express -t jade 文件名
