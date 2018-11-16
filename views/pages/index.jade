@@ -1,0 +1,18 @@
+extends ../layout
+//- 继承父组件
+
+//- 注册子组件
+block content
+  .container
+    .row
+      each item in movies
+        //-对movies里的电影同样格式遍历输出，形成首页
+        .col-md-2
+          //- col-md-2时垂直方向居中占2份？
+          .thumbnail
+            a(href = '/movie/#{item._id}')
+              img(src = '#{item.poster}', alt = '#{item.title}') 
+            .caption
+              h3 #{item.title}
+              p: a.btn.btn-primary( href = '/movie/#{item._id}', role = 'button') 观看预告片
+              //- html 里面的 role 本质上是增强语义性

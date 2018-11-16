@@ -1,0 +1,29 @@
+extends ../layout
+
+block content
+  .container
+    .row
+      //- 左侧播放窗口
+      .col-md-7
+        //- -md-7是bootstramp里的窗口栅格分隔，这是给7份宽度
+        embed(src = '#{movie.flash}', allowFullScreen = 'true', quality = 'high', width = '720', 
+              height = '600', align = 'middle', type = 'application/x-shockwave-flash')
+        //- embed是html5新增，用来嵌入不同多媒体插件
+            属性分别是影片链接，允许全屏，高质量，宽高,居中,flash的mime格式（还有video/MP4之类）
+      
+      //- 右侧详细信息窗口
+      .col-md-5
+        dl.dl-horizontal
+          dt 电影名字
+          dd= movie.title
+          dt 导演
+          dd= movie.director
+          dt 国家
+          dd= movie.country
+          dt 语言
+          dd= movie.language
+          dt 上映年份
+          dd= movie.year
+          dt 简介
+          dd= movie.summary
+      
