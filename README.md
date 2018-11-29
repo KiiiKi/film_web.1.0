@@ -30,7 +30,7 @@
     db.on('error', console.error.bind(console, 'MongoDB连接错误:'));
     db.once('open', (callback) => {console.log('MongoDB连接成功！！')})
     ```
-* 先mongodb文件夹里新建个数据库：use imooc,再新建集合：db.createCollection(Movie)
+* ~先mongodb文件夹里新建个数据库：use imooc,再新建集合：db.createCollection(Movie)~
 * 录入不到mongodb的数据库里
         * 先下载安装mongodb,启动服务，启动后先在mongodb文件夹那里先开一个imooc-->Movies的集合，然后就能录入到数据库了
 * 当post数据时，获取request内容在req.body里
